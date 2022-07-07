@@ -1,0 +1,15 @@
+#!/usr/bin/env groovy
+
+@Library('polaris-cicd-Test') _
+
+continuousIntegrationPushArtifactsToNexus(
+    appExecutableJar: 'mongo-util-1.0.1',
+    appName: 'mongo-util',
+    projectName: 'mongo-util',
+    mavenTag: '3.8-openjdk-8',
+    nexusVersion: 'nexus3', // this value will be the default one, change it if nexus verions is updated.
+    nexusProtocal: 'https', // this value will be the default one, change it if nexus is accessible via http.
+    nexusURL: 'nexus.infrrdapis.com', // this value will be the default one, change it if nexus domain name is changed.
+    nexusRepository: 'titan-maven/', // you can update the nexus repository to push the artifacts
+    artifactsExtension: 'jar'  // this value will be the default one, change it if your artifacts extension is changed to war/ear.
+)
