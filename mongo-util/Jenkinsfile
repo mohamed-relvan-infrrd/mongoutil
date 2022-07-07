@@ -3,7 +3,7 @@
 @Library('polaris-cicd-Test') _
 
 continuousIntegrationPushArtifactsToNexus(
-    appExecutableJar: 'mongo-util-1.0.1',
+    appExecutableJar: 'mongo-util-1.0.1-SNAPSHOT',
     appName: 'mongo-util',
     projectName: 'mongo-util',
     mavenTag: '3.8-openjdk-8',
